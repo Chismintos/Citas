@@ -12,12 +12,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
+
       <body className={mooli.className}>
-        <div className='flex h-[100vh]'>
-          <Navbar></Navbar>
-          {children}
+
+        <div className='flex flex-col min-h-screen'>
+          <Navbar/>
+
+          <main className='flex-grow p-8'>
+              {children}
+            </main>
+
         </div>
+
       </body>
+      
     </html>
   )
 }
