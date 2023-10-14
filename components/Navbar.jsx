@@ -22,18 +22,25 @@ const Navbar = () => {
       <header>
     
       {/* Responsive Navbar  */}  
-      <Popover className=' hidden sm:flex bg-violet-300 p-4 text-lg font-bold justify-evenly  '>
+      <Popover className=' hidden sm:flex bg-violet-300 h-14 text-lg font-bold justify-evenly h-{20}  '>
+
+          <div className='md'>
+            <img  src="https://cdn-icons-png.flaticon.com/512/3030/3030856.png" 
+                  alt="perrito bonito" 
+                  width="50" height="50"
+                  />
+          </div>
 
           {/* Primer div (enlaces) */}
-          <div className='hidden  space-x-10 font-bold sm:flex md:space-x-20 lg:space-x-28 '>
+          <div className='hidden  space-x-10 items-center font-bold sm:flex md:space-x-20 lg:space-x-28 '>
             <Link href={'/'}>Inicio</Link>
             <Link href={'/citas'}>Agendar cita</Link>
             <Link href={'/acercade'}>Acerca de</Link>
           </div>
 
           {/* Segundo div (Login | Signin) */}
-          <div className='hidden md:flex'>
-            <p>Sign in | Sign up</p>
+          <div className='hidden md:flex '>
+            <button className='border-dashed'>Sign in | Sign up</button>
           </div>
           
       </Popover>
@@ -41,30 +48,30 @@ const Navbar = () => {
 
       {/*Responsive Menu*/}
 
-      <Popover className='sm:hidden p-4 mx-auto font-bold h-13 items-center relative '>
-  <Popover.Button className='text-3xl justify-self-center '>
-    <AiOutlineMenu />
-  </Popover.Button>
+      <Popover className='sm:hidden h-14 font-bold bg-violet-300   '>
+        <Popover.Button className='text-3xl items-center p-3 '>
+          <AiOutlineMenu />
+        </Popover.Button>
 
-  <Popover.Overlay className="fixed inset-0 bg-violet-300 opacity-90" />
+        <Popover.Overlay className="fixed inset-0 " />
 
-  <Popover.Panel className="z-10 absolute top-16 w-40 left-4 bg-violet-500 p-4 rounded-md">
-    <div className='flex flex-col gap-2 text-white'>
-      <div className='flex items-center'>
-        <AiFillHome className='text-2xl mr-2' />
-        <Link href='/'>Inicio</Link>
-      </div>
-      <div className='flex items-center'>
-        <BiCalendarEdit className='text-2xl mr-2' />
-        <Link href='/citas'>Agendar cita</Link>
-      </div>
-      <div className='flex items-center'>
-        <LuBadgeInfo className='text-2xl mr-2' />
-        <Link href='/acercade'>Acerca de</Link>
-      </div>
-    </div>
-  </Popover.Panel>
-</Popover>
+        <Popover.Panel className="z-10 absolute top-16 w-40 left-4 bg-violet-500 p-4 rounded-md shadow-2xl  ">
+          <div className='flex flex-col gap-2 text-white'>
+            <div className='flex items-center'>
+              <AiFillHome className='text-2xl mr-2' />
+              <Link href='/'>Inicio</Link>
+            </div>
+            <div className='flex items-center'>
+              <BiCalendarEdit className='text-2xl mr-2' />
+              <Link href='/citas'>Agendar cita</Link>
+            </div>
+            <div className='flex items-center'>
+              <LuBadgeInfo className='text-2xl mr-2' />
+              <Link href='/acercade'>Acerca de</Link>
+            </div>
+          </div>
+        </Popover.Panel>
+      </Popover>
 
 
      
