@@ -10,11 +10,6 @@ import {AiFillHome, AiOutlineMenu} from 'react-icons/ai'
 import { BiCalendarEdit } from "react-icons/bi";
 import {LuBadgeInfo} from 'react-icons/lu'
 
-import HomeIcon from '@mui/icons-material/Home';
-import InfoIcon from '@mui/icons-material/Info';
-import EditCalendarIcon from '@mui/icons-material/EditCalendar';
-import MenuIcon from '@mui/icons-material/Menu';
-
 
 const Navbar = () => {
   return (
@@ -22,12 +17,13 @@ const Navbar = () => {
       <header>
     
       {/* Responsive Navbar  */}  
-      <Popover className=' hidden sm:flex bg-violet-300 h-14 text-lg font-bold justify-evenly h-{20}  '>
+      <Popover className=' hidden sm:flex bg-green-400 h-20 text-lg font-bold justify-evenly  '>
 
-          <div className='md'>
-            <img  src="https://cdn-icons-png.flaticon.com/512/3030/3030856.png" 
-                  alt="perrito bonito" 
-                  width="50" height="50"
+          <div className=''>
+            <img  src="https://cdn.discordapp.com/attachments/1159699541164036137/1162466839117434890/pngwing.com_1.png?ex=653c0a9c&is=6529959c&hm=578238e8a6648d740ffb9eca6a65a47f34ace77d3844dc578cd0793209b68ea9&" 
+                  alt="idk citas" 
+                  width="72" height="72"
+                  className='p-2'
                   />
           </div>
 
@@ -40,7 +36,7 @@ const Navbar = () => {
 
           {/* Segundo div (Login | Signin) */}
           <div className='hidden md:flex '>
-            <button className='border-dashed'>Sign in | Sign up</button>
+            <button className=' '> Sign in | Sign up </button>
           </div>
           
       </Popover>
@@ -48,15 +44,24 @@ const Navbar = () => {
 
       {/*Responsive Menu*/}
 
-      <Popover className='sm:hidden h-14 font-bold bg-violet-300   '>
-        <Popover.Button className='text-3xl items-center p-3 '>
+      <Popover className='sm:hidden font-bold bg-green-400 h-20 flex justify-between  '>
+
+        <Popover.Button className='text-3xl  p-6 '>
           <AiOutlineMenu />
         </Popover.Button>
 
+        <div className='items pr-5'>
+            <img  src="https://cdn.discordapp.com/attachments/1159699541164036137/1162466839117434890/pngwing.com_1.png?ex=653c0a9c&is=6529959c&hm=578238e8a6648d740ffb9eca6a65a47f34ace77d3844dc578cd0793209b68ea9&" 
+                  alt="idk citas" 
+                  width="72" height="72"
+                  className='p-2'
+                  />
+          </div>
+
         <Popover.Overlay className="fixed inset-0 " />
 
-        <Popover.Panel className="z-10 absolute top-16 w-40 left-4 bg-violet-500 p-4 rounded-md shadow-2xl  ">
-          <div className='flex flex-col gap-2 text-white'>
+        <Popover.Panel className=" absolute top-16 w-60 left-7  bg-violet-500 p-5 rounded-md shadow-2xl  ">
+          <div className='flex flex-col gap-5 text-white'>
             <div className='flex items-center'>
               <AiFillHome className='text-2xl mr-2' />
               <Link href='/'>Inicio</Link>
@@ -71,6 +76,8 @@ const Navbar = () => {
             </div>
           </div>
         </Popover.Panel>
+
+        
       </Popover>
 
 
@@ -81,22 +88,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-
-
-{/* <div className='hidden sm:flex'>
-          <ul className='text-white space-y-4 mt-4'>
-            <li className='space-x-3 flex items-center'>
-              <HomeIcon />
-              <Link href={'/'}>Inicio</Link></li>
-              
-            <li className='space-x-3 flex items-center'>
-              <EditCalendarIcon/>
-              <Link href={'/citas'}>Agendar cita</Link>
-            </li>
-            <li className='space-x-3 flex items-center'>
-              <InfoIcon />
-              <Link href={'/acercade'}>Acerca de</Link>
-            </li>
-          </ul>
-
-        </div> */}
